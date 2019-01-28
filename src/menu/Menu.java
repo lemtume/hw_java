@@ -1,11 +1,13 @@
 package menu;
 
 import java.io.*;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class Menu {
+public class Menu implements Serializable {
+
 
     ArrayList<Subscriber> SubList = new ArrayList<Subscriber> ();
 
@@ -57,11 +59,11 @@ public class Menu {
     }
 
     public void LoginPassword() {
-        Subscriber d = null;
+        Subscriber d2 = null;
         try {
             FileInputStream fileIn = new FileInputStream ( "C:\\Users\\User\\Desktop\\HW_JAVA\\subscriber.ser" );
             ObjectInputStream in = new ObjectInputStream ( fileIn );
-            d = (Subscriber) in.readObject ();
+            d2 = (Subscriber) in.readObject ();
             in.close ();
             fileIn.close ();
         } catch (IOException i) {
@@ -73,24 +75,24 @@ public class Menu {
             return;
         }
 
-        SubscriberPoint.SubscriberName = d.getSubscriberName ();
+        SubscriberPoint.SubscriberName = d2.getSubscriberName ();
         //  System.out.println (SubscriberPoint.SubscriberName);
-        SubscriberPoint.SubscriberLastName = d.getSubscriberLastName ();
-        SubscriberPoint.SubscriberAgreementNumber = d.getSubscriberAgreementNumber ();
+        SubscriberPoint.SubscriberLastName = d2.getSubscriberLastName ();
+        SubscriberPoint.SubscriberAgreementNumber = d2.getSubscriberAgreementNumber ();
 
-        SubscriberPoint.SubscriberLogin = d.getSubscriberLogin ();           //считанные логин и пароль передаем в SubscriberPoint, закомментить чтобы сбросить пароль по умолчанию
+        SubscriberPoint.SubscriberLogin = d2.getSubscriberLogin ();           //считанные логин и пароль передаем в SubscriberPoint, закомментить чтобы сбросить пароль по умолчанию
         //   System.out.println (SubscriberPoint.SubscriberLogin);
-        SubscriberPoint.SubscriberPassword = d.getSubscriberPassword ();
+        SubscriberPoint.SubscriberPassword = d2.getSubscriberPassword ();
         //   System.out.println (SubscriberPoint.SubscriberPassword);
 
-        SubscriberPoint.startDate = d.getStartDate ();
-        SubscriberPoint.endDate = d.getEndDate ();
-        SubscriberPoint.feeRate = d.getFeeRate ();
-        SubscriberPoint.paid = d.getPaid ();
+        SubscriberPoint.startDate = d2.getStartDate ();
+        SubscriberPoint.endDate = d2.getEndDate ();
+        SubscriberPoint.feeRate = d2.getFeeRate ();
+        SubscriberPoint.paid = d2.getPaid ();
 
     }
 
-    public void helpOnONE(int what) throws IOException {
+    public void helpOnONE(int what) throws java.io.IOException {
         do {
             System.out.println ( "|--------- Данные об абоненте -----------|" );
             SubscriberPoint.showSubscriberInfo ();
@@ -123,7 +125,7 @@ public class Menu {
         } while (isValid ( what ));
     }
 
-    public void helpOnTWO(int what) throws IOException {
+    public void helpOnTWO(int what) throws java.io.IOException {
         do {
 
             System.out.println ( "--------- Данные о балансе -----------:" );
@@ -160,7 +162,7 @@ public class Menu {
         } while (isValid ( what ));
     }
 
-    public void helpOnTHREE(int what) throws IOException {
+    public void helpOnTHREE(int what) throws java.io.IOException {
 
 
         do {
@@ -400,12 +402,12 @@ public class Menu {
 
     }
 
-    public void helpOnFOUR(int what) throws IOException {
+    public void helpOnFOUR(int what) throws java.io.IOException {
 
         readFile ();
     }
 
-    public void helpOnFIVE(int what) throws IOException {
+    public void helpOnFIVE(int what) throws java.io.IOException {
         do {
 
             System.out.println ( "--------- Данные о балансе -----------:" );
@@ -442,7 +444,7 @@ public class Menu {
         } while (isValid ( what ));
     }
 
-    public void helpOn(int what) throws IOException {
+    public void helpOn(int what) throws java.io.IOException {
         switch (what) {
 
             case '1':

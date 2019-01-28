@@ -1,12 +1,17 @@
 package menu;
 
-import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Scanner;
+import java.io.Serializable;
 
 
-public class Subscriber implements Serializable {
 
+public class Subscriber implements Serializable, SubscriberAndServices {
+    private static final long serialVersionUID = -5250997439565143459L;
 
     String SubscriberName;
     String SubscriberLastName;

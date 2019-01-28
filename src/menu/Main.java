@@ -1,10 +1,13 @@
 package menu;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Date;
+import java.io.*;
 
-import java.io.IOException;
+public class Main implements Serializable {
 
-public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws java.io.IOException {
         int choice;
         int ignore;
 
@@ -15,12 +18,11 @@ public class Main {
         //menuObj.readFile ();
         menuObj.LoginPassword ();
 
-
         for (int LoginAttemp = 2; LoginAttemp >= 0; LoginAttemp--) {         // цикл по проверке количества неудачных входов
             label:
             do {
 
-                if (menuObj.LoginInput () == true) {                     // если вход произведён
+                if (menuObj.LoginInput () == true) {                    // если вход произведён
 
                     for (; ; ) {
 
@@ -37,13 +39,13 @@ public class Main {
                         while (menuObj.isValid ( choice ));//while (!choice.hasNextInt()); //
                         if (choice == 'q') {
                             LoginAttemp = 0;
-                            break label;
+                            break /*label*/;
                         }
 
                         System.out.println ( "\n" );
                         menuObj.helpOn ( choice );
                     }
-                }
+               }
                 System.out.println ( "Осталось попыток: " + LoginAttemp + "\n\n" );
                 break label;
             }
