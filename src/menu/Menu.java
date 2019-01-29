@@ -33,7 +33,7 @@ public class Menu implements Serializable {
         Subscriber d = null;
 
         try {
-            FileInputStream fileIn = new FileInputStream ( "C:\\Users\\User\\Desktop\\HW_JAVA\\subscriber.ser" );
+            FileInputStream fileIn = new FileInputStream ( "D:\\GIT\\subscriber.ser" );
             ObjectInputStream in = new ObjectInputStream ( fileIn );
             d = (Subscriber) in.readObject ();
             in.close ();
@@ -61,7 +61,7 @@ public class Menu implements Serializable {
     public void LoginPassword() {
         Subscriber d2 = null;
         try {
-            FileInputStream fileIn = new FileInputStream ( "C:\\Users\\User\\Desktop\\HW_JAVA\\subscriber.ser" );
+            FileInputStream fileIn = new FileInputStream ( "D:\\GIT\\subscriber.ser" );
             ObjectInputStream in = new ObjectInputStream ( fileIn );
             d2 = (Subscriber) in.readObject ();
             in.close ();
@@ -183,7 +183,7 @@ public class Menu implements Serializable {
             Subscriber d = null;
 
             try {
-                FileInputStream fileIn = new FileInputStream ( "C:\\Users\\User\\Desktop\\HW_JAVA\\subscriber.ser" );
+                FileInputStream fileIn = new FileInputStream ( "D:\\GIT\\subscriber.ser" );
                 ObjectInputStream in = new ObjectInputStream ( fileIn );
                 d = (Subscriber) in.readObject ();
                 in.close ();
@@ -280,12 +280,12 @@ public class Menu implements Serializable {
                         System.out.println ( "Размер ArrayList SubList:   " + SubList.size () );
                     }
                     try {
-                        FileOutputStream fileOut1 = new FileOutputStream ( "C:\\Users\\User\\Desktop\\HW_JAVA\\subscriber.ser" );
+                        FileOutputStream fileOut1 = new FileOutputStream ( "D:\\GIT\\subscriber.ser" );
                         ObjectOutputStream out1 = new ObjectOutputStream ( fileOut1 );
                         out1.writeObject ( obj );
                         out1.close ();
                         fileOut1.close ();
-                        System.out.println ( "Сериализованная информация о Subscriber сохранена в \\Desktop\\HW_JAVA\\subscriber.ser" );
+                        System.out.println ( "Сериализованная информация о Subscriber сохранена в D:\\GIT\\subscriber.ser" );
                     } catch (IOException i) {
                         i.printStackTrace ();
                     }
@@ -324,12 +324,12 @@ public class Menu implements Serializable {
                         System.out.println ( "Размер ArrayList SubList:   " + SubList.size () );
                     }
                     try {
-                        FileOutputStream fileOut1 = new FileOutputStream ( "C:\\Users\\User\\Desktop\\HW_JAVA\\subscriber.ser" );
+                        FileOutputStream fileOut1 = new FileOutputStream ( "D:\\GIT\\subscriber.ser" );
                         ObjectOutputStream out1 = new ObjectOutputStream ( fileOut1 );
                         out1.writeObject ( obj );
                         out1.close ();
                         fileOut1.close ();
-                        System.out.println ( "Сериализованная информация о  сохранена в \\Desktop\\HW_JAVA\\subscriber.ser" );
+                        System.out.println ( "Сериализованная информация о  сохранена в D:\\GIT\\subscriber.ser" );
                     } catch (IOException i) {
                         i.printStackTrace ();
                     }
@@ -370,12 +370,12 @@ public class Menu implements Serializable {
                         System.out.println ( "Размер ArrayList DrList:   " + SubList.size () );
                     }
                     try {
-                        FileOutputStream fileOut1 = new FileOutputStream ( "C:\\Users\\User\\Desktop\\HW_JAVA\\subscriber.ser" );
+                        FileOutputStream fileOut1 = new FileOutputStream ( "D:\\GIT\\subscriber.ser" );
                         ObjectOutputStream out1 = new ObjectOutputStream ( fileOut1 );
                         out1.writeObject ( obj );
                         out1.close ();
                         fileOut1.close ();
-                        System.out.println ( "Сериализованная информация о  сохранена в \\Desktop\\HW_JAVA\\subscriber.ser" );
+                        System.out.println ( "Сериализованная информация о  сохранена в D:\\GIT\\subscriber.ser" );
                     } catch (IOException i) {
                         i.printStackTrace ();
                     }
