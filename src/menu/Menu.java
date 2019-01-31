@@ -2,6 +2,7 @@ package menu;
 
 import java.io.*;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,88 +12,13 @@ public class Menu implements Serializable {
 
     ArrayList<Subscriber> SubList = new ArrayList<Subscriber> ();
 
-    Subscriber SubscriberPoint = new Subscriber ( "Роман", "Лемтюгов", "TS123123",
+    Subscriber SubscriberPoint = new Subscriber ("1","Роман", "Лемтюгов", "TS123123",
             "Roman", "123", "01.01.2018", "31.12.2018", 30, 20 );
 
 
-    public void readFile() {
+//////////////////////// Menu Items/////////////////////////////////////////////
 
-        String SubscriberName = null;
-        String SubscriberLastName = null;
-        String SubscriberAgreementNumber = null;
-        String SubscriberLogin = null;
-        String SubscriberPassword = null;
-        String startDate = null;
-        String endDate = null;
-        double feeRate = 0;
-        double paid = 0;
-
-        Subscriber obj;
-        obj = new Subscriber ( SubscriberName, SubscriberLastName, SubscriberAgreementNumber, SubscriberLogin, SubscriberPassword, startDate, endDate, feeRate, paid );
-
-        Subscriber d = null;
-
-        try {
-            FileInputStream fileIn = new FileInputStream ( "subscriber.ser" );
-            ObjectInputStream in = new ObjectInputStream ( fileIn );
-            d = (Subscriber) in.readObject ();
-            in.close ();
-            fileIn.close ();
-        } catch (IOException i) {
-            i.printStackTrace ();
-            return;
-        } catch (ClassNotFoundException cl) {
-            System.out.println ( "Subscriber класс не найден" );
-            cl.printStackTrace ();
-            return;
-        }
-
-        System.out.println ( "|--------- Данные из сохраненного файла -------------| \n" );
-        String format = "|%1$-20s|%2$-20s|%3$-20s|%4$-20s|%5$-20s|%6$-20s|%7$-20s|%8$-20s|%9$-20s|\n";
-        String format2 = "|%1$-188s|\n";
-        System.out.format ( format2, "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" );
-        System.out.format ( format, "SubscriberName", "SubscriberLastName", "AgreementNumber", "SubscriberLogin", "SubscriberPassword", "StartDate", "EndDate", "FeeRate", "Paid total" );
-        System.out.format ( format2, "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" );
-        System.out.format ( format, d.getSubscriberName (), d.getSubscriberLastName (), d.getSubscriberAgreementNumber (), d.getSubscriberLogin (), d.getSubscriberPassword (), d.getStartDate (), d.getEndDate (), d.getFeeRate (), d.getPaid () );
-        System.out.format ( format2, "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" );
-
-    }
-
-    public void LoginPassword() {
-        Subscriber d2 = null;
-        try {
-            FileInputStream fileIn = new FileInputStream ( "subscriber.ser" );
-            ObjectInputStream in = new ObjectInputStream ( fileIn );
-            d2 = (Subscriber) in.readObject ();
-            in.close ();
-            fileIn.close ();
-        } catch (IOException i) {
-            i.printStackTrace ();
-            return;
-        } catch (ClassNotFoundException cl) {
-            System.out.println ( "Subscriber класс не найден" );
-            cl.printStackTrace ();
-            return;
-        }
-
-        SubscriberPoint.SubscriberName = d2.getSubscriberName ();
-        //  System.out.println (SubscriberPoint.SubscriberName);
-        SubscriberPoint.SubscriberLastName = d2.getSubscriberLastName ();
-        SubscriberPoint.SubscriberAgreementNumber = d2.getSubscriberAgreementNumber ();
-
-        SubscriberPoint.SubscriberLogin = d2.getSubscriberLogin ();           //считанные логин и пароль передаем в SubscriberPoint, закомментить чтобы сбросить пароль по умолчанию
-        //   System.out.println (SubscriberPoint.SubscriberLogin);
-        SubscriberPoint.SubscriberPassword = d2.getSubscriberPassword ();
-        //   System.out.println (SubscriberPoint.SubscriberPassword);
-
-        SubscriberPoint.startDate = d2.getStartDate ();
-        SubscriberPoint.endDate = d2.getEndDate ();
-        SubscriberPoint.feeRate = d2.getFeeRate ();
-        SubscriberPoint.paid = d2.getPaid ();
-
-    }
-
-    public void helpOnONE(int what) throws java.io.IOException {
+    public void helpOnShowSubscribers(int what) throws java.io.IOException {
         do {
             System.out.println ( "|--------- Данные об абоненте -----------|" );
             SubscriberPoint.showSubscriberInfo ();
@@ -123,9 +49,9 @@ public class Menu implements Serializable {
 
             } while (ignore != '\n');
         } while (isValid ( what ));
-    }
+    }           //1
 
-    public void helpOnTWO(int what) throws java.io.IOException {
+    public void helpOnBalance(int what) throws java.io.IOException {
         do {
 
             System.out.println ( "--------- Данные о балансе -----------:" );
@@ -160,13 +86,14 @@ public class Menu implements Serializable {
 
             } while (ignore != '\n');
         } while (isValid ( what ));
-    }
+    }                   //2
 
-    public void helpOnTHREE(int what) throws java.io.IOException {
+    public void helpOnEditSubscriberData(int what) throws java.io.IOException {
 
 
         do {
 
+            String SubscriberID=null;
             String SubscriberName = null;
             String SubscriberLastName = null;
             String SubscriberAgreementNumber = null;
@@ -178,7 +105,7 @@ public class Menu implements Serializable {
             double paid = 0;
 
             Subscriber obj;
-            obj = new Subscriber ( SubscriberName, SubscriberLastName, SubscriberAgreementNumber, SubscriberLogin, SubscriberPassword, startDate, endDate, feeRate, paid );
+            obj = new Subscriber ( SubscriberID, SubscriberName, SubscriberLastName, SubscriberAgreementNumber, SubscriberLogin, SubscriberPassword, startDate, endDate, feeRate, paid );
 
             Subscriber d = null;
 
@@ -201,9 +128,9 @@ public class Menu implements Serializable {
             String format = "|%1$-20s|%2$-20s|%3$-20s|%4$-20s|%5$-20s|%6$-20s|%7$-20s|%8$-20s|%9$-20s|\n";
             String format2 = "|%1$-188s|\n";
             System.out.format ( format2, "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" );
-            System.out.format ( format, "SubscriberName", "SubscriberLastName", "AgreementNumber", "SubscriberLogin", "SubscriberPassword", "StartDate", "EndDate", "FeeRate", "Paid total" );
+            System.out.format ( format, "SubscriberID", "SubscriberName", "SubscriberLastName", "AgreementNumber", "SubscriberLogin", "SubscriberPassword", "StartDate", "EndDate", "FeeRate", "Paid total" );
             System.out.format ( format2, "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" );
-            System.out.format ( format, d.getSubscriberName (), d.getSubscriberLastName (), d.getSubscriberAgreementNumber (), d.getSubscriberLogin (), d.getSubscriberPassword (), d.getStartDate (), d.getEndDate (), d.getFeeRate (), d.getPaid () );
+            System.out.format ( format,d.getSubscriberID (), d.getSubscriberName (), d.getSubscriberLastName (), d.getSubscriberAgreementNumber (), d.getSubscriberLogin (), d.getSubscriberPassword (), d.getStartDate (), d.getEndDate (), d.getFeeRate (), d.getPaid () );
             System.out.format ( format2, "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" );
 
 
@@ -217,24 +144,17 @@ public class Menu implements Serializable {
             System.out.println ( "3. Изменить платежи" );
             System.out.println ( "   Введите значение или нажмите q чтобы выйти в главное меню:\n" );
 
-           /* SubscriberName = d.getSubscriberName ();
-            SubscriberLastName = d.getSubscriberLastName ();
-            SubscriberAgreementNumber = d.getSubscriberAgreementNumber ();
-            SubscriberLogin = d.getSubscriberLogin ();
-            SubscriberPassword = d.getSubscriberPassword ();
-            startDate = d.getStartDate ();
-            endDate = d.getEndDate ();
-            feeRate = d.getFeeRate ();
-            paid = d.getPaid ();
 
-            Subscriber obj;
-          obj = new Subscriber ( SubscriberName, SubscriberLastName, SubscriberAgreementNumber, SubscriberLogin, SubscriberPassword, startDate, endDate, feeRate, paid ); */
 
             what = (char) System.in.read ();
             Scanner input = new Scanner ( System.in );
             switch (what) {
                 case '1':     //с клавиатуры вводи значение, его передаем соответствующему сеттеру. Параметру объекта присваиваем значение, которое было введенно с клавы
                     //int c = new Scanner(System.in).nextInt();
+
+                    System.out.println ( "Введите новый ID абонента: " );
+                    obj.setSubscriberID ( input.next () );
+                    SubscriberPoint.SubscriberID = obj.SubscriberID;
 
                     System.out.println ( "Введите новое Имя абонента: " );
                     obj.setSubscriberName ( input.next () );
@@ -299,6 +219,7 @@ public class Menu implements Serializable {
 
                 case '2':
 
+                    obj.setSubscriberID ( SubscriberPoint.SubscriberID );
                     obj.setSubscriberName ( SubscriberPoint.SubscriberName );
                     obj.setSubscriberLastName ( SubscriberPoint.SubscriberLastName );
                     obj.setSubscriberAgreementNumber ( SubscriberPoint.SubscriberAgreementNumber );
@@ -344,6 +265,7 @@ public class Menu implements Serializable {
 
                 case '3':
 
+                    obj.setSubscriberID( SubscriberPoint.SubscriberID );
                     obj.setSubscriberName ( SubscriberPoint.SubscriberName );
                     obj.setSubscriberLastName ( SubscriberPoint.SubscriberLastName );
                     obj.setSubscriberAgreementNumber ( SubscriberPoint.SubscriberAgreementNumber );
@@ -400,41 +322,36 @@ public class Menu implements Serializable {
         } while (isValid ( what ));
 
 
-    }
+    }        //3
 
-    public void helpOnFOUR(int what) throws java.io.IOException {
+    public void helpOnShowSavedFileInfo(int what) throws java.io.IOException {
 
         readFile ();
-    }
+    }         //4
 
-    public void helpOnFIVE(int what) throws java.io.IOException {
+    public void helpOnServices(int what) throws java.io.IOException {
         do {
-
-            System.out.println ( "--------- Данные о балансе -----------:" );
+            System.out.println ( "|--------- Данные об абоненте -----------|" );
             SubscriberPoint.showSubscriberInfo ();
-            //SubscriberPoint.showCurrentSubscriberTime ();
-
             System.out.print ( "\n\n" );
-            System.out.println ( " 1. Показать баланс" );
-            System.out.println ( " 2. Показать сколько осталось дней" );
-            System.out.println ( " 3. Вернуться в главное меню" );
-            System.out.println ( "Bыбepитe пункт (q - назад): " );
+            System.out.println ( " 1. Показать список услуг" );
+            System.out.println ( " 2. Показать стоимость услуг" );
+            System.out.println ( " 3. Нажмите 3 или q чтобы вернуться назад\n" );
             what = (char) System.in.read ();
 
             switch (what) {
                 case '1':
+                    showServicesList ();
 
-                    SubscriberPoint.showSubscriberBalance ();
                     System.out.print ( "\n\n" );
                     break;
 
                 case '2':
-                    SubscriberPoint.showSubscriberTime ();
-                    // SubscriberPoint.showCurrentSubscriberTime ();
+                    changeServicesFee();
                     break;
 
-                case '3':
-                    break;
+                default: break;
+
             }
             char ignore;
             do {
@@ -442,47 +359,163 @@ public class Menu implements Serializable {
 
             } while (ignore != '\n');
         } while (isValid ( what ));
-    }
 
+    }                  //5
+
+    ///////////// MainMenu//////////////////////////////////////////////////////
     public void helpOn(int what) throws java.io.IOException {
         switch (what) {
 
             case '1':
-                helpOnONE ( what );
+                helpOnShowSubscribers ( what );
                 break;
 
             case '2':
-                helpOnTWO ( what );
+                helpOnBalance ( what );
                 break;
             case '3':
-                helpOnTHREE ( what );
+                helpOnEditSubscriberData ( what );
                 break;
 
             case '4':
-                helpOnFOUR ( what );
+                helpOnShowSavedFileInfo ( what );
                 break;
 
             case '5':
-                helpOnFIVE ( what );
+                helpOnServices ( what );
                 break;
 
             default:
                 break;
         }
         System.out.println ();
-    }
-
+    }                          //Structure
     public void showMenu() {
         System.out.println ( "Главное меню:" );
         System.out.println ( " 1. Показать данные об абоненте" );
         System.out.println ( " 2. Баланс" );
         System.out.println ( " 3. Изменить данные Абонента" );
         System.out.println ( " 4. Показать абонента, сохраненного в файл\n" );
+        System.out.println ( " 5. Услуги\n" );
 
         System.out.print ( "Bыбepитe пункт(q to quit): " );
 
 
+    }                                                           //MainMenuNames
+
+////////////////////////////////////////////////////////////////////////////////
+    ////////////////// Internal Menu Methods ///////////////////////////////////
+
+    public void readFile() {
+
+        String SubscriberId = null;
+        String SubscriberName = null;
+        String SubscriberLastName = null;
+        String SubscriberAgreementNumber = null;
+        String SubscriberLogin = null;
+        String SubscriberPassword = null;
+        String startDate = null;
+        String endDate = null;
+        double feeRate = 0;
+        double paid = 0;
+
+        Subscriber obj;
+        obj = new Subscriber (SubscriberId, SubscriberName, SubscriberLastName, SubscriberAgreementNumber, SubscriberLogin, SubscriberPassword, startDate, endDate, feeRate, paid );
+
+        Subscriber d = null;
+
+        try {
+            FileInputStream fileIn = new FileInputStream ( "subscriber.ser" );
+            ObjectInputStream in = new ObjectInputStream ( fileIn );
+            d = (Subscriber) in.readObject ();
+            in.close ();
+            fileIn.close ();
+        } catch (IOException i) {
+            i.printStackTrace ();
+            return;
+        } catch (ClassNotFoundException cl) {
+            System.out.println ( "Subscriber класс не найден" );
+            cl.printStackTrace ();
+            return;
+        }
+
+        System.out.println ( "|--------- Данные из сохраненного файла -------------| \n" );
+        String format = "|%1$-20s|%2$-20s|%3$-20s|%4$-20s|%5$-20s|%6$-20s|%7$-20s|%8$-20s|%9$-20s|\n";
+        String format2 = "|%1$-188s|\n";
+        System.out.format ( format2, "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" );
+        System.out.format ( format, "SubscriberID", "SubscriberName", "SubscriberLastName", "AgreementNumber", "SubscriberLogin", "SubscriberPassword", "StartDate", "EndDate", "FeeRate", "Paid total" );
+        System.out.format ( format2, "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" );
+        System.out.format ( format, d.getSubscriberID (), d.getSubscriberName (), d.getSubscriberLastName (), d.getSubscriberAgreementNumber (), d.getSubscriberLogin (), d.getSubscriberPassword (), d.getStartDate (), d.getEndDate (), d.getFeeRate (), d.getPaid () );
+        System.out.format ( format2, "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" );
+
+    }                                                           // Read *.ser file
+
+    public void LoginPassword() {
+        Subscriber d2 = null;
+        try {
+            FileInputStream fileIn = new FileInputStream ( "subscriber.ser" );
+            ObjectInputStream in = new ObjectInputStream ( fileIn );
+            d2 = (Subscriber) in.readObject ();
+            in.close ();
+            fileIn.close ();
+        } catch (IOException i) {
+            i.printStackTrace ();
+            return;
+        } catch (ClassNotFoundException cl) {
+            System.out.println ( "Subscriber класс не найден" );
+            cl.printStackTrace ();
+            return;
+        }
+
+        SubscriberPoint.SubscriberName = d2.getSubscriberName ();
+        //  System.out.println (SubscriberPoint.SubscriberName);
+        SubscriberPoint.SubscriberLastName = d2.getSubscriberLastName ();
+        SubscriberPoint.SubscriberAgreementNumber = d2.getSubscriberAgreementNumber ();
+
+        SubscriberPoint.SubscriberLogin = d2.getSubscriberLogin ();           //считанные логин и пароль передаем в SubscriberPoint, закомментить чтобы сбросить пароль по умолчанию
+        //   System.out.println (SubscriberPoint.SubscriberLogin);
+        SubscriberPoint.SubscriberPassword = d2.getSubscriberPassword ();
+        //   System.out.println (SubscriberPoint.SubscriberPassword);
+
+        SubscriberPoint.startDate = d2.getStartDate ();
+        SubscriberPoint.endDate = d2.getEndDate ();
+        SubscriberPoint.feeRate = d2.getFeeRate ();
+        SubscriberPoint.paid = d2.getPaid ();
+
+    }                                                      // Login\Password using *.ser file
+
+    public void showServicesList (){
+      //  ServicesName AllServicesName[] = ServicesName.values ();
+
+        /*for (ServicesName a: ServicesName.values ())
+            System.out.println (a + ServicesName.getPrice()); */
+        for (ServicesName services: ServicesName.values ()) {
+            System.out.println (services +"   " + services.getPrice());
+        }
+
+
     }
+
+    public void changeServicesFee (){
+        //  ServicesName AllServicesName[] = ServicesName.values ();
+
+        /*for (ServicesName a: ServicesName.values ())
+            System.out.println (a + ServicesName.getPrice()); */
+        Scanner input = new Scanner ( System.in );
+
+
+        for (ServicesName services: ServicesName.values ()) {
+            System.out.println ("Введите стоимость " + services +" ");
+            BigDecimal valueInput = input.nextBigDecimal ();
+            services.setPrice (valueInput);
+
+            System.out.println ("Новая стоимость " + services+ "составляет " +services.getPrice () +"\n");
+
+        }
+        System.out.println ("\n");
+        System.out.println ( "\tНажмите ВВОД, чтобы продолжить" );
+    }
+
 
     public static boolean isValid(int ch) {
 
@@ -494,6 +527,7 @@ public class Menu implements Serializable {
             return false;
         }
     }
+
 
     public boolean LoginInput() throws IOException {
         String Username;
@@ -520,7 +554,6 @@ public class Menu implements Serializable {
 
                     }
 
-    }
-
+    }                                   //Login/Password checking
 
 }

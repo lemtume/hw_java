@@ -13,6 +13,7 @@ import java.io.Serializable;
 public class Subscriber implements Serializable, SubscriberAndServices {
     private static final long serialVersionUID = -5250997439565143459L;
 
+    String SubscriberID;
     String SubscriberName;
     String SubscriberLastName;
     String SubscriberAgreementNumber;
@@ -23,6 +24,14 @@ public class Subscriber implements Serializable, SubscriberAndServices {
     double feeRate;
     double paid;
 
+
+    public String getSubscriberID() {
+        return SubscriberID;
+    }
+
+    public void setSubscriberID(String subscriberID) {
+        SubscriberID = subscriberID;
+    }
 
 
     public String getStartDate() {
@@ -57,9 +66,10 @@ public class Subscriber implements Serializable, SubscriberAndServices {
         this.paid = paid;
     }
 
-    public Subscriber(String SubscriberName, String SubscriberLastName, String SubscriberAgreementNumber, String SubscriberLogin,
+    public Subscriber(String SubscriberID, String SubscriberName, String SubscriberLastName, String SubscriberAgreementNumber, String SubscriberLogin,
                       String SubscriberPassword, String startDate, String endDate, double feeRate, double paid) {
 
+        this.SubscriberID=SubscriberID;
         this.SubscriberName = SubscriberName;
         this.SubscriberLastName = SubscriberLastName;
         this.SubscriberAgreementNumber = SubscriberAgreementNumber;
@@ -117,9 +127,9 @@ public class Subscriber implements Serializable, SubscriberAndServices {
         String format = "|%1$-20s|%2$-20s|%3$-20s|%4$-20s|%5$-20s|%6$-20s|%7$-20s|%8$-20s|%9$-20s|\n";
         String format2 = "|%1$-188s|\n";
         System.out.format(format2, "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-        System.out.format(format, "SubscriberName", "SubscriberLastName", "AgreementNumber", "SubscriberLogin", "SubscriberPassword", "StartDate", "EndDate", "FeeRate", "Paid total");
+        System.out.format(format, "SubscriberID","SubscriberName", "SubscriberLastName", "AgreementNumber", "SubscriberLogin", "SubscriberPassword", "StartDate", "EndDate", "FeeRate", "Paid total");
         System.out.format(format2, "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-        System.out.format ( format, SubscriberName, SubscriberLastName, SubscriberAgreementNumber, SubscriberLogin, SubscriberPassword, startDate, endDate, feeRate, paid);
+        System.out.format ( format, SubscriberID, SubscriberName, SubscriberLastName, SubscriberAgreementNumber, SubscriberLogin, SubscriberPassword, startDate, endDate, feeRate, paid);
         System.out.format(format2, "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
     }
 
