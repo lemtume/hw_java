@@ -33,7 +33,7 @@ public class Menu implements Serializable {
         Subscriber d = null;
 
         try {
-            FileInputStream fileIn = new FileInputStream ( "D:\\GIT\\subscriber.ser" );
+            FileInputStream fileIn = new FileInputStream ( "subscriber.ser" );
             ObjectInputStream in = new ObjectInputStream ( fileIn );
             d = (Subscriber) in.readObject ();
             in.close ();
@@ -61,7 +61,7 @@ public class Menu implements Serializable {
     public void LoginPassword() {
         Subscriber d2 = null;
         try {
-            FileInputStream fileIn = new FileInputStream ( "D:\\GIT\\subscriber.ser" );
+            FileInputStream fileIn = new FileInputStream ( "subscriber.ser" );
             ObjectInputStream in = new ObjectInputStream ( fileIn );
             d2 = (Subscriber) in.readObject ();
             in.close ();
@@ -183,7 +183,7 @@ public class Menu implements Serializable {
             Subscriber d = null;
 
             try {
-                FileInputStream fileIn = new FileInputStream ( "D:\\GIT\\subscriber.ser" );
+                FileInputStream fileIn = new FileInputStream ( "subscriber.ser" );
                 ObjectInputStream in = new ObjectInputStream ( fileIn );
                 d = (Subscriber) in.readObject ();
                 in.close ();
@@ -280,7 +280,7 @@ public class Menu implements Serializable {
                         System.out.println ( "Размер ArrayList SubList:   " + SubList.size () );
                     }
                     try {
-                        FileOutputStream fileOut1 = new FileOutputStream ( "D:\\GIT\\subscriber.ser" );
+                        FileOutputStream fileOut1 = new FileOutputStream ( "subscriber.ser" );
                         ObjectOutputStream out1 = new ObjectOutputStream ( fileOut1 );
                         out1.writeObject ( obj );
                         out1.close ();
@@ -324,7 +324,7 @@ public class Menu implements Serializable {
                         System.out.println ( "Размер ArrayList SubList:   " + SubList.size () );
                     }
                     try {
-                        FileOutputStream fileOut1 = new FileOutputStream ( "D:\\GIT\\subscriber.ser" );
+                        FileOutputStream fileOut1 = new FileOutputStream ( "subscriber.ser" );
                         ObjectOutputStream out1 = new ObjectOutputStream ( fileOut1 );
                         out1.writeObject ( obj );
                         out1.close ();
@@ -370,7 +370,7 @@ public class Menu implements Serializable {
                         System.out.println ( "Размер ArrayList DrList:   " + SubList.size () );
                     }
                     try {
-                        FileOutputStream fileOut1 = new FileOutputStream ( "D:\\GIT\\subscriber.ser" );
+                        FileOutputStream fileOut1 = new FileOutputStream ( "subscriber.ser" );
                         ObjectOutputStream out1 = new ObjectOutputStream ( fileOut1 );
                         out1.writeObject ( obj );
                         out1.close ();
