@@ -20,12 +20,12 @@ public class ServerThread extends Thread {
     ObjectInputStream serverInputStream = null;
     ObjectOutputStream serverOutputStream = null;
     ArrayList<Subscriber> mySubscriber = new ArrayList<Subscriber>();
-    Long SubsriberId;
+    String SubsriberId;
     Socket clientSocket;
 
     public ServerThread(Socket clientSocket) throws IOException, FileNotFoundException, ClassNotFoundException {
 
-        mySubscriber.add(new Subscriber ( (long) 1, "Роман", "Лемтюгов", "Договор№1", "Roman",
+        mySubscriber.add(new Subscriber ( "1", "Роман", "Лемтюгов", "Договор№1", "Roman",
                 "123", "01.01.2017", "31.12.2019", 5, 4 ));
 
         writeToFile("subscriberServ.ser", mySubscriber);
@@ -33,8 +33,9 @@ public class ServerThread extends Thread {
         mySubscriber = readFromFile("subscriber.ser");
         Iterator<Subscriber> iterator = mySubscriber.iterator();
         while (iterator.hasNext()) {
-            SubsriberId = Math.round(Math.random() * 100 + System.currentTimeMillis());
-            iterator.next().setSubscriberID(SubsriberId);
+            SubsriberId = String.valueOf ( (int) Math.round(Math.random() * 100 + System.currentTimeMillis()) );
+
+            iterator.next().setSubscriberID( String.valueOf ( SubsriberId ) );
         }
         this.clientSocket = clientSocket;
 

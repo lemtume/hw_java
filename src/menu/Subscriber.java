@@ -7,7 +7,7 @@ import java.io.Serializable;
 public class Subscriber implements Serializable, SubscriberAndServices {
     private static final long serialVersionUID = -5250997439565143459L;
 
-    Long SubscriberID;
+    String SubscriberID;
     String SubscriberName;
     String SubscriberLastName;
     String SubscriberAgreementNumber;
@@ -19,11 +19,11 @@ public class Subscriber implements Serializable, SubscriberAndServices {
     double paid;
 
 
-    public Long getSubscriberID() {
+    public String getSubscriberID() {
         return SubscriberID;
     }
 
-    public void setSubscriberID(Long subscriberID) {
+    public void setSubscriberID(String subscriberID) {
         SubscriberID = subscriberID;
     }
 
@@ -60,7 +60,7 @@ public class Subscriber implements Serializable, SubscriberAndServices {
         this.paid = paid;
     }
 
-    public Subscriber(Long SubscriberID, String SubscriberName, String SubscriberLastName, String SubscriberAgreementNumber, String SubscriberLogin,
+    public Subscriber(String SubscriberID, String SubscriberName, String SubscriberLastName, String SubscriberAgreementNumber, String SubscriberLogin,
                       String SubscriberPassword, String startDate, String endDate, double feeRate, double paid) {
 
         this.SubscriberID=SubscriberID;

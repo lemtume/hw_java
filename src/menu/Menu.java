@@ -13,7 +13,7 @@ public class Menu implements Serializable {
     ArrayList<ServicesName> ServicesArrayList = new ArrayList<ServicesName> (  );
 
 /////////////////////////////////////////////////default subscriber/////////////////////////////////////////////////////////////////////////////////////
-    Subscriber SubscriberPoint = new Subscriber ((long)1,"Роман", "Лемтюгов", "TS123123",
+    Subscriber SubscriberPoint = new Subscriber ("1","Роман", "Лемтюгов", "TS123123",
             "Roman", "123", "01.01.2018", "31.12.2018", 30, 20 );
 
 
@@ -94,7 +94,7 @@ public class Menu implements Serializable {
 
         do {
 
-            Long SubscriberID=null;
+            String SubscriberID=null;
             String SubscriberName = null;
             String SubscriberLastName = null;
             String SubscriberAgreementNumber = null;
@@ -154,7 +154,7 @@ public class Menu implements Serializable {
                     //int c = new Scanner(System.in).nextInt();
 
                     System.out.println ( "Введите новый ID абонента: " );
-                    obj.setSubscriberID ( input.nextLong() );
+                    obj.setSubscriberID ( input.next() );
                     SubscriberPoint.SubscriberID = obj.SubscriberID;
 
                     System.out.println ( "Введите новое Имя абонента: " );
@@ -411,7 +411,7 @@ public class Menu implements Serializable {
 
     public void readFile() {
 
-        Long SubscriberId = null;
+        String SubscriberId = null;
         String SubscriberName = null;
         String SubscriberLastName = null;
         String SubscriberAgreementNumber = null;
