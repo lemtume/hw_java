@@ -1,4 +1,5 @@
 package menu;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -11,8 +12,7 @@ public class Main implements Serializable {
         int choice;
         int ignore;
 
-       // ArrayList<Services> ServicesList = new ArrayList<Services> ();
-
+        // ArrayList<Services> ServicesList = new ArrayList<Services> ();
 
         Menu menuObj = new Menu ();
         //menuObj.readFile ();
@@ -29,10 +29,10 @@ public class Main implements Serializable {
                         do {
                             menuObj.showMenu ();
 
-                            choice = (char) System.in.read ();//choice.nextInt();////
+                            choice = (char) System.in.read ();
 
                             do {
-                                ignore = (char) System.in.read ();//new Scanner (System.in).nextInt(); //;   игнор ввода
+                                ignore = (char) System.in.read (); // игнор ввода
 
                             } while (ignore != '\n');
                         }
@@ -45,7 +45,7 @@ public class Main implements Serializable {
                         System.out.println ( "\n" );
                         menuObj.helpOn ( choice );
                     }
-               }
+                }
                 System.out.println ( "Осталось попыток: " + LoginAttemp + "\n\n" );
                 break label;
             }
@@ -53,15 +53,7 @@ public class Main implements Serializable {
         }
 
 
-
-
-
-
-
     }
-
-
-
 
 
 }

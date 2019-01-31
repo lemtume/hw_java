@@ -1,19 +1,13 @@
 package menu;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Scanner;
 import java.io.Serializable;
-
-
 
 public class Subscriber implements Serializable, SubscriberAndServices {
     private static final long serialVersionUID = -5250997439565143459L;
 
-    String SubscriberID;
+    Long SubscriberID;
     String SubscriberName;
     String SubscriberLastName;
     String SubscriberAgreementNumber;
@@ -25,11 +19,11 @@ public class Subscriber implements Serializable, SubscriberAndServices {
     double paid;
 
 
-    public String getSubscriberID() {
+    public Long getSubscriberID() {
         return SubscriberID;
     }
 
-    public void setSubscriberID(String subscriberID) {
+    public void setSubscriberID(Long subscriberID) {
         SubscriberID = subscriberID;
     }
 
@@ -66,7 +60,7 @@ public class Subscriber implements Serializable, SubscriberAndServices {
         this.paid = paid;
     }
 
-    public Subscriber(String SubscriberID, String SubscriberName, String SubscriberLastName, String SubscriberAgreementNumber, String SubscriberLogin,
+    public Subscriber(Long SubscriberID, String SubscriberName, String SubscriberLastName, String SubscriberAgreementNumber, String SubscriberLogin,
                       String SubscriberPassword, String startDate, String endDate, double feeRate, double paid) {
 
         this.SubscriberID=SubscriberID;

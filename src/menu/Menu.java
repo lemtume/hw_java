@@ -6,13 +6,14 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class Menu implements Serializable {
 
 
     ArrayList<Subscriber> SubList = new ArrayList<Subscriber> ();
+    ArrayList<ServicesName> ServicesArrayList = new ArrayList<ServicesName> (  );
 
-    Subscriber SubscriberPoint = new Subscriber ("1","Роман", "Лемтюгов", "TS123123",
+/////////////////////////////////////////////////default subscriber/////////////////////////////////////////////////////////////////////////////////////
+    Subscriber SubscriberPoint = new Subscriber ((long)1,"Роман", "Лемтюгов", "TS123123",
             "Roman", "123", "01.01.2018", "31.12.2018", 30, 20 );
 
 
@@ -93,7 +94,7 @@ public class Menu implements Serializable {
 
         do {
 
-            String SubscriberID=null;
+            Long SubscriberID=null;
             String SubscriberName = null;
             String SubscriberLastName = null;
             String SubscriberAgreementNumber = null;
@@ -105,7 +106,7 @@ public class Menu implements Serializable {
             double paid = 0;
 
             Subscriber obj;
-            obj = new Subscriber ( SubscriberID, SubscriberName, SubscriberLastName, SubscriberAgreementNumber, SubscriberLogin, SubscriberPassword, startDate, endDate, feeRate, paid );
+            obj = new Subscriber (SubscriberID, SubscriberName, SubscriberLastName, SubscriberAgreementNumber, SubscriberLogin, SubscriberPassword, startDate, endDate, feeRate, paid );
 
             Subscriber d = null;
 
@@ -153,7 +154,7 @@ public class Menu implements Serializable {
                     //int c = new Scanner(System.in).nextInt();
 
                     System.out.println ( "Введите новый ID абонента: " );
-                    obj.setSubscriberID ( input.next () );
+                    obj.setSubscriberID ( input.nextLong() );
                     SubscriberPoint.SubscriberID = obj.SubscriberID;
 
                     System.out.println ( "Введите новое Имя абонента: " );
@@ -192,6 +193,8 @@ public class Menu implements Serializable {
                     System.out.println ( "Введите оплаченную сумму за весь период 0,00" );
                     obj.setPaid ( input.nextDouble () );
                     SubscriberPoint.paid = obj.paid;
+
+
 
                     SubList.add ( obj );
 
@@ -335,7 +338,7 @@ public class Menu implements Serializable {
             SubscriberPoint.showSubscriberInfo ();
             System.out.print ( "\n\n" );
             System.out.println ( " 1. Показать список услуг" );
-            System.out.println ( " 2. Показать стоимость услуг" );
+            System.out.println ( " 2. Изменить стоимость услуг" );
             System.out.println ( " 3. Нажмите 3 или q чтобы вернуться назад\n" );
             what = (char) System.in.read ();
 
@@ -408,7 +411,7 @@ public class Menu implements Serializable {
 
     public void readFile() {
 
-        String SubscriberId = null;
+        Long SubscriberId = null;
         String SubscriberName = null;
         String SubscriberLastName = null;
         String SubscriberAgreementNumber = null;
@@ -509,10 +512,17 @@ public class Menu implements Serializable {
             BigDecimal valueInput = input.nextBigDecimal ();
             services.setPrice (valueInput);
 
+
             System.out.println ("Новая стоимость " + services+ "составляет " +services.getPrice () +"\n");
 
         }
         System.out.println ("\n");
+
+
+
+
+
+
         System.out.println ( "\tНажмите ВВОД, чтобы продолжить" );
     }
 
