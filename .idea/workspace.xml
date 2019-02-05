@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cee936c2-d2d1-4950-9104-e21e0113118c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/client/SubscriberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/subscriber_original.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/menu/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Subscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/ContactProjectServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/SubscriberProjectServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscriber.ser" beforeDir="false" afterPath="$PROJECT_DIR$/subscriber.ser" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,16 +20,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/server/SubscriberProjectServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/menu/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+            <state relative-caret-position="612">
+              <caret line="407" lean-forward="true" selection-start-line="407" selection-end-line="407" />
               <folding>
+                <element signature="method#helpOnShowSubscribers#0;class#Menu#0" />
+                <element signature="e#790#1884#1" />
+                <element signature="method#helpOnBalance#0;class#Menu#0" />
+                <element signature="e#3329#15102#1" />
+                <element signature="e#4417#4564#0" />
+                <element signature="e#6020#6183#0" />
+                <element signature="method#helpOnShowSavedFileInfo#0;class#Menu#0" />
                 <element signature="method#helpOnServices#0;class#Menu#0" />
                 <element signature="method#helpOn#0;class#Menu#0" />
                 <element signature="method#showMenu#0;class#Menu#0" />
+                <element signature="method#readFile#0;class#Menu#0" />
+                <element signature="method#LoginPassword#0;class#Menu#0" />
                 <element signature="method#showServicesList#0;class#Menu#0" />
+                <element signature="method#changeServicesFee#0;class#Menu#0" />
+                <element signature="e#22718#23015#1" />
                 <element signature="method#isValid#0;class#Menu#0" />
                 <element signature="method#LoginInput#0;class#Menu#0" />
               </folding>
@@ -34,103 +60,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/menu/Subscriber.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#546#547#0" expanded="true" />
-                <element signature="e#582#583#0" expanded="true" />
-                <element signature="e#630#631#0" expanded="true" />
-                <element signature="e#673#674#0" expanded="true" />
-                <element signature="method#Subscriber#0;class#Subscriber#0" />
-                <element signature="method#showSubscriberInfo#0;class#Subscriber#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/java/io/ObjectStreamClass.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="766" selection-start-line="766" selection-end-line="766" />
-              <folding>
-                <element signature="e#28653#28654#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/server/ServerThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/SubscriberTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="27" column="39" lean-forward="true" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/java/net/SocketInputStream.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/java/io/ObjectInputStream.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="74" selection-start-line="74" selection-end-line="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/menu/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/menu/Services.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="69" column="147" selection-start-line="69" selection-start-column="147" selection-end-line="69" selection-end-column="147" />
+            <state relative-caret-position="119">
+              <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#main#0;class#Main#0" />
               </folding>
             </state>
           </provider>
@@ -151,6 +87,10 @@
       <find>//</find>
       <find>\\</find>
       <find>priva</find>
+      <find>Arraylist</find>
+      <find>Sub</find>
+      <find>SubList</find>
+      <find>get</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -166,21 +106,22 @@
       <list>
         <option value="$PROJECT_DIR$/src/menu/SubscriberAndServices.java" />
         <option value="$PROJECT_DIR$/src/test/test.java" />
-        <option value="$PROJECT_DIR$/src/menu/Main.java" />
         <option value="$PROJECT_DIR$/src/menu/Services.java" />
         <option value="$PROJECT_DIR$/src/server/ContactProjectServer.java" />
-        <option value="$PROJECT_DIR$/src/client/SubscriberTest.java" />
-        <option value="$PROJECT_DIR$/src/server/ServerThread.java" />
         <option value="$PROJECT_DIR$/src/menu/Menu.java" />
+        <option value="$PROJECT_DIR$/src/client/SubscriberTest.java" />
         <option value="$PROJECT_DIR$/src/menu/Subscriber.java" />
+        <option value="$PROJECT_DIR$/src/menu/Main.java" />
+        <option value="$PROJECT_DIR$/src/server/ServerThread.java" />
+        <option value="$PROJECT_DIR$/src/server/SubscriberProjectServer.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-20" />
-    <option name="y" value="27" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="x" value="79" />
+    <option name="y" value="100" />
+    <option name="width" value="1612" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -204,26 +145,19 @@
               <item name="GIT" type="b2602c69:ProjectViewProjectNode" />
               <item name="GIT" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GIT" type="b2602c69:ProjectViewProjectNode" />
               <item name="GIT" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="menu" type="462c0819:PsiDirectoryNode" />
-              <item name="Services.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="GIT" type="b2602c69:ProjectViewProjectNode" />
               <item name="GIT" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GIT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GIT" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -242,13 +176,14 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GIT" />
+      <recent name="D:\GIT\src\" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GIT" />
       <recent name="D:\GIT\src" />
       <recent name="D:\GIT\src\menu" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GIT\src\" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -263,20 +198,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ContactProjectServer">
-    <configuration name="ContactProjectServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="server.ContactProjectServer" />
-      <module name="GIT" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.SubscriberProjectServer">
     <configuration name="EnumDemo3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.EnumDemo3" />
       <module name="GIT" />
@@ -316,6 +238,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SubscriberProjectServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="server.SubscriberProjectServer" />
+      <module name="GIT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SubscriberTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="client.SubscriberTest" />
       <module name="GIT" />
@@ -331,7 +266,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ContactProjectServer" />
+        <item itemvalue="Application.SubscriberProjectServer" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.SubscriberTest" />
         <item itemvalue="Application.ServicesName" />
@@ -353,7 +288,19 @@
       <workItem from="1548713625939" duration="2291000" />
       <workItem from="1548881227207" duration="1224000" />
       <workItem from="1548958549015" duration="15534000" />
-      <workItem from="1548974973332" duration="1186000" />
+      <workItem from="1548974973332" duration="1855000" />
+      <workItem from="1549052519315" duration="846000" />
+      <workItem from="1549053902414" duration="1312000" />
+      <workItem from="1549191303066" duration="1735000" />
+      <workItem from="1549193541827" duration="350000" />
+      <workItem from="1549194603119" duration="990000" />
+      <workItem from="1549196313294" duration="24000" />
+      <workItem from="1549197160111" duration="19000" />
+      <workItem from="1549197187983" duration="16378000" />
+      <workItem from="1549357630035" duration="11720000" />
+      <workItem from="1549380518464" duration="2630000" />
+      <workItem from="1549389347006" duration="4200000" />
+      <workItem from="1549396978138" duration="219000" />
     </task>
     <task id="LOCAL-00001" summary="0.0.2">
       <created>1548709075845</created>
@@ -411,17 +358,55 @@
       <option name="project" value="LOCAL" />
       <updated>1548974894124</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="0.0.9 &#10;//серверная часть и клиентская часть - без тестов&#10;&#10;0.0.8&#10;// services через enum с привязкой стоимости &#10;&#10;0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList">
+      <created>1548976392375</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1548976392375</updated>
+    </task>
+    <task id="LOCAL-00010" summary="0.0.9 &#10;//серверная часть и клиентская часть - c тестами, но в 1 проекте&#10;&#10;0.0.8&#10;// services через enum с привязкой стоимости &#10;&#10;0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList">
+      <created>1548976789184</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1548976789184</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20758000" />
+    <option name="totallyTimeSpent" value="61850000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="23" width="1936" height="1096" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2081138" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.85046726" visible="true" weight="0.11064278" />
+      <window_info id="Designer" order="1" />
+      <window_info id="Learn" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Structure" order="4" sideWeight="0.1495327" side_tool="true" visible="true" weight="0.11064278" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31879544" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978564" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32917964" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32917964" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08377239" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -443,30 +428,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2081138" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Learn" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32917964" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32917964" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32917964" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,17 +441,13 @@
     <MESSAGE value="0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList" />
     <MESSAGE value="0.0.8&#10;// services через enum с привязкой стоимости &#10;&#10;0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList" />
     <MESSAGE value="0.0.9 &#10;//серверная часть (пока с ошибкой)&#10;&#10;0.0.8&#10;// services через enum с привязкой стоимости &#10;&#10;0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.9 &#10;//серверная часть (пока с ошибкой)&#10;&#10;0.0.8&#10;// services через enum с привязкой стоимости &#10;&#10;0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList" />
+    <MESSAGE value="0.0.9 &#10;//серверная часть и клиентская часть - без тестов&#10;&#10;0.0.8&#10;// services через enum с привязкой стоимости &#10;&#10;0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList" />
+    <MESSAGE value="0.0.9 &#10;//серверная часть и клиентская часть - c тестами, но в 1 проекте&#10;&#10;0.0.8&#10;// services через enum с привязкой стоимости &#10;&#10;0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.9 &#10;//серверная часть и клиентская часть - c тестами, но в 1 проекте&#10;&#10;0.0.8&#10;// services через enum с привязкой стоимости &#10;&#10;0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/menu/Menu.java</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/menu/Menu.java</url>
           <line>509</line>
@@ -502,6 +459,30 @@
           <line>75</line>
           <properties />
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/menu/Menu.java</url>
+          <line>243</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/menu/Menu.java</url>
+          <line>245</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/menu/Menu.java</url>
+          <line>432</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/menu/Menu.java</url>
+          <line>502</line>
+          <properties />
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -546,12 +527,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/ContactProjectServer.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/java/io/ObjectStreamClass.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        <state relative-caret-position="12121">
+          <caret line="766" selection-start-line="766" selection-end-line="766" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#28653#28654#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -566,91 +547,117 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/test.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/java/io/ObjectInputStream.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="469">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/java/net/SocketInputStream.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
+        <state relative-caret-position="469">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/java/net/Socket.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="262" selection-start-line="262" selection-end-line="262" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/SubscriberTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="27" column="39" lean-forward="true" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        <state relative-caret-position="272">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/java/io/ObjectStreamClass.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="766" selection-start-line="766" selection-end-line="766" />
-          <folding>
-            <element signature="e#28653#28654#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/java/io/ObjectInputStream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/ServerThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menu/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menu/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-          <folding>
-            <element signature="method#helpOnServices#0;class#Menu#0" />
-            <element signature="method#helpOn#0;class#Menu#0" />
-            <element signature="method#showMenu#0;class#Menu#0" />
-            <element signature="method#showServicesList#0;class#Menu#0" />
-            <element signature="method#isValid#0;class#Menu#0" />
-            <element signature="method#LoginInput#0;class#Menu#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menu/Subscriber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+        <state relative-caret-position="357">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
-            <element signature="method#Subscriber#0;class#Subscriber#0" />
             <element signature="method#showSubscriberInfo#0;class#Subscriber#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscriber.cer" />
+    <entry file="file://$PROJECT_DIR$/subscriber.ser">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subscriber2.cer">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menu/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="407" lean-forward="true" selection-start-line="407" selection-end-line="407" />
+          <folding>
+            <element signature="method#helpOnShowSubscribers#0;class#Menu#0" />
+            <element signature="e#790#1884#1" />
+            <element signature="method#helpOnBalance#0;class#Menu#0" />
+            <element signature="e#3329#15102#1" />
+            <element signature="e#4417#4564#0" />
+            <element signature="e#6020#6183#0" />
+            <element signature="method#helpOnShowSavedFileInfo#0;class#Menu#0" />
+            <element signature="method#helpOnServices#0;class#Menu#0" />
+            <element signature="method#helpOn#0;class#Menu#0" />
+            <element signature="method#showMenu#0;class#Menu#0" />
+            <element signature="method#readFile#0;class#Menu#0" />
+            <element signature="method#LoginPassword#0;class#Menu#0" />
+            <element signature="method#showServicesList#0;class#Menu#0" />
+            <element signature="method#changeServicesFee#0;class#Menu#0" />
+            <element signature="e#22718#23015#1" />
+            <element signature="method#isValid#0;class#Menu#0" />
+            <element signature="method#LoginInput#0;class#Menu#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ServerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="method#readFromFile#0;class#ServerThread#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menu/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+          <folding>
+            <element signature="method#main#0;class#Main#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/SubscriberProjectServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

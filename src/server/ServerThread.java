@@ -25,19 +25,32 @@ public class ServerThread extends Thread {
 
     public ServerThread(Socket clientSocket) throws IOException, FileNotFoundException, ClassNotFoundException {
 
-        mySubscriber.add(new Subscriber ( "1", "Роман", "Лемтюгов", "Договор№1", "Roman",
-                "123", "01.01.2017", "31.12.2019", 5, 4 ));
 
-        writeToFile("subscriberServ.ser", mySubscriber);
+        Subscriber d = null;
 
-        mySubscriber = readFromFile("subscriber.ser");
-        Iterator<Subscriber> iterator = mySubscriber.iterator();
-        while (iterator.hasNext()) {
-            SubsriberId = String.valueOf ( (int) Math.round(Math.random() * 100 + System.currentTimeMillis()) );
-
-            iterator.next().setSubscriberID( String.valueOf ( SubsriberId ) );
+        try {
+            FileInputStream fileIn = new FileInputStream ( "subscriber.ser" );
+            ObjectInputStream in = new ObjectInputStream ( fileIn );
+            d = (Subscriber) in.readObject ();
+            in.close ();
+            fileIn.close ();
+        } catch (IOException i) {
+            i.printStackTrace ();
+            return;
+        } catch (ClassNotFoundException cl) {
+            System.out.println ( "Subscriber класс не найден" );
+            cl.printStackTrace ();
+            return;
         }
+        ////////////
+
+
+        ArrayList<Subscriber> arrayList =  new ArrayList<Subscriber>();
+        arrayList.add(d);
+
         this.clientSocket = clientSocket;
+
+
 
     }
     @Override
@@ -45,7 +58,12 @@ public class ServerThread extends Thread {
         try {
             serverInputStream = new ObjectInputStream(clientSocket.getInputStream());
             serverOutputStream = new ObjectOutputStream(clientSocket.getOutputStream());
-            serverOutputStream.writeObject(mySubscriber);
+
+
+         //   serverOutputStream.writeObject(d);
+
+
+
         } catch (IOException ex) {
             Logger.getLogger(ServerThread.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -7,16 +7,16 @@ import java.io.Serializable;
 public class Subscriber implements Serializable, SubscriberAndServices {
     private static final long serialVersionUID = -5250997439565143459L;
 
-    String SubscriberID;
-    String SubscriberName;
-    String SubscriberLastName;
-    String SubscriberAgreementNumber;
-    String SubscriberLogin;
-    String SubscriberPassword;
-    String startDate;
-    String endDate;
-    double feeRate;
-    double paid;
+    public String SubscriberID;
+    public String SubscriberName;
+    public String SubscriberLastName;
+    public String SubscriberAgreementNumber;
+    public String SubscriberLogin;
+    public String SubscriberPassword;
+    public String startDate;
+    public String endDate;
+    public double feeRate;
+    public double paid;
 
 
     public String getSubscriberID() {
