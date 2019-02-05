@@ -21,8 +21,7 @@ public class SubscriberProjectServer {
                 // запуск потока
                //  thread.start();
 
-
-                /////////////////
+                ///////////////// Чтение сериализационного файла и добавление в arrayList, отправка на клиента
              ///*
                 String SubscriberId = null;
                 String SubscriberName = null;
@@ -69,12 +68,10 @@ public class SubscriberProjectServer {
                 }
                 /////*/
 
-                /////////////////// Приём arraylist с клиента /////////////////
+                /////////////////// Приём arrayList с клиента и запись в файл /////////////////
                 ObjectInputStream serverInputStream = new ObjectInputStream ( clientSocket.getInputStream() );
                 ArrayList<Subscriber> arrayList2 =  new ArrayList<>();
                 arrayList2 = (ArrayList<Subscriber>) serverInputStream.readObject ();
-
-
 
                 for (Subscriber sb2: arrayList2) {
                     sb2.showSubscriberInfo ();

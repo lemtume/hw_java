@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cee936c2-d2d1-4950-9104-e21e0113118c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscriber_original.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/menu/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/menu/Subscriber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/ContactProjectServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/SubscriberProjectServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/ServerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/subscriber.ser" beforeDir="false" afterPath="$PROJECT_DIR$/subscriber.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/SubscriberTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/SubscriberProjectServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/SubscriberProjectServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,14 +15,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/SubscriberProjectServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+            <state relative-caret-position="1190">
+              <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/menu/SubscriberAndServices.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/ServerThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="694">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
             </state>
           </provider>
         </entry>
@@ -140,18 +153,6 @@
               <item name="GIT" type="b2602c69:ProjectViewProjectNode" />
               <item name="GIT" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GIT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GIT" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GIT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GIT" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GIT" type="b2602c69:ProjectViewProjectNode" />
@@ -300,7 +301,7 @@
       <workItem from="1549357630035" duration="11720000" />
       <workItem from="1549380518464" duration="2630000" />
       <workItem from="1549389347006" duration="4200000" />
-      <workItem from="1549396978138" duration="219000" />
+      <workItem from="1549396978138" duration="561000" />
     </task>
     <task id="LOCAL-00001" summary="0.0.2">
       <created>1548709075845</created>
@@ -372,15 +373,21 @@
       <option name="project" value="LOCAL" />
       <updated>1548976789184</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="0.0.10&#10;// исправлена серверная часть&#10;// нет работы с несколькими абонентами&#10;// нет класса Orders&#10;// нет наследования&#10;&#10;&#10;&#10;0.0.9 &#10;//серверная часть и клиентская часть - c тестами, но в 1 проекте&#10;&#10;0.0.8&#10;// services через enum с привязкой стоимости &#10;&#10;0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList">
+      <created>1549397344977</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1549397344977</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61850000" />
+    <option name="totallyTimeSpent" value="62192000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.85046726" visible="true" weight="0.11064278" />
       <window_info id="Designer" order="1" />
@@ -443,7 +450,8 @@
     <MESSAGE value="0.0.9 &#10;//серверная часть (пока с ошибкой)&#10;&#10;0.0.8&#10;// services через enum с привязкой стоимости &#10;&#10;0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList" />
     <MESSAGE value="0.0.9 &#10;//серверная часть и клиентская часть - без тестов&#10;&#10;0.0.8&#10;// services через enum с привязкой стоимости &#10;&#10;0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList" />
     <MESSAGE value="0.0.9 &#10;//серверная часть и клиентская часть - c тестами, но в 1 проекте&#10;&#10;0.0.8&#10;// services через enum с привязкой стоимости &#10;&#10;0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.0.9 &#10;//серверная часть и клиентская часть - c тестами, но в 1 проекте&#10;&#10;0.0.8&#10;// services через enum с привязкой стоимости &#10;&#10;0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList" />
+    <MESSAGE value="0.0.10&#10;// исправлена серверная часть&#10;// нет работы с несколькими абонентами&#10;// нет класса Orders&#10;// нет наследования&#10;&#10;&#10;&#10;0.0.9 &#10;//серверная часть и клиентская часть - c тестами, но в 1 проекте&#10;&#10;0.0.8&#10;// services через enum с привязкой стоимости &#10;&#10;0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.0.10&#10;// исправлена серверная часть&#10;// нет работы с несколькими абонентами&#10;// нет класса Orders&#10;// нет наследования&#10;&#10;&#10;&#10;0.0.9 &#10;//серверная часть и клиентская часть - c тестами, но в 1 проекте&#10;&#10;0.0.8&#10;// services через enum с привязкой стоимости &#10;&#10;0.0.7&#10;//subscriber.ser без пути&#10;&#10;&#10;0.0.5&#10;&#10;//перенес файл subscriber.ser в папку с проектом:&#10;//при пустом файле надо менять код для входа, нужно расставить комменты;&#10;&#10;&#10;&#10;0.0.4&#10;//сериализация - убрал ошибку сериализации при использовании интерфейса:&#10;//private static final long serialVersionUID=-5250997439565143459L;&#10;&#10;// подготовил основу для объединения subscriber и services через arrayList" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -517,13 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menu/SubscriberAndServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -632,16 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/ServerThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-          <folding>
-            <element signature="method#readFromFile#0;class#ServerThread#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/menu/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -652,13 +643,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ServerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/SubscriberProjectServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+        <state relative-caret-position="1190">
+          <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/menu/SubscriberAndServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
