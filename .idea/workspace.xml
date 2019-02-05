@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cee936c2-d2d1-4950-9104-e21e0113118c" name="Default Changelist" comment="" />
+    <list default="true" id="cee936c2-d2d1-4950-9104-e21e0113118c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Subscriber_client/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +37,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Subscriber_client/src/menu/Menu.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -160,24 +167,6 @@
               <item name="GIT" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GIT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GIT" type="462c0819:PsiDirectoryNode" />
-              <item name="Subscriber_client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GIT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GIT" type="462c0819:PsiDirectoryNode" />
-              <item name="Subscriber_client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GIT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GIT" type="462c0819:PsiDirectoryNode" />
-              <item name="Subscriber_client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -320,7 +309,7 @@
       <workItem from="1549357630035" duration="11720000" />
       <workItem from="1549380518464" duration="2630000" />
       <workItem from="1549389347006" duration="4200000" />
-      <workItem from="1549396978138" duration="813000" />
+      <workItem from="1549396978138" duration="1063000" />
     </task>
     <task id="LOCAL-00001" summary="0.0.2">
       <created>1548709075845</created>
@@ -417,13 +406,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62444000" />
+    <option name="totallyTimeSpent" value="62694000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8506098" visible="true" weight="0.11064278" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8506098" visible="true" weight="0.11064278" />
       <window_info id="Designer" order="1" />
       <window_info id="Learn" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -431,7 +419,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31879544" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31879544" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978564" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -702,7 +690,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Subscriber_client/src/menu/Menu.java">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
