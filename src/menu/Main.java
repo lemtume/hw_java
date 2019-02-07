@@ -8,7 +8,7 @@ import java.io.*;
 public class Main implements Serializable {
 
 
-    public static void main(String[] args) throws java.io.IOException {
+    public static void main(String[] args) throws java.io.IOException, ClassNotFoundException {
         int choice;
         int ignore;
 

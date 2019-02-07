@@ -1,5 +1,7 @@
 package menu;
 
+import sun.security.util.Password;
+
 import java.io.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -166,32 +168,17 @@ public class Menu implements Serializable {
                     SubscriberPoint.paid = obj.paid;
 
 
-                    SubList.add ( obj );
-                    break;
+                    SubList.add ( 0,obj );
 
 
-                 /*   for (Subscriber dr : SubList) {//с помощью цикла for each c ArrayList читаем поля поочередно сохраняя с переменную dr
-                        dr.showSubscriberInfo ();
-                        System.out.println ( "Размер ArrayList SubList:   " + SubList.size () );
-                    }
-                    try {
-                        FileOutputStream fileOut1 = new FileOutputStream ( "subscriber.ser" );
-                        ObjectOutputStream out1 = new ObjectOutputStream ( fileOut1 );
-                        out1.writeObject ( obj );
-                        out1.close ();
-                        fileOut1.close ();
-                        System.out.println ( "Сериализованная информация о Subscriber сохранена в D:\\GIT\\subscriber.ser" );
-                    } catch (IOException i) {
-                        i.printStackTrace ();
-                    }
+
                     if (input.nextLine ().equals ( "q" )) {
-                        System.out.println ( "Введите q чтобы попасть назад: " );
-                        break;
+                    System.out.println ( "Введите q чтобы попасть назад: " );
+                    break;
 
                     }
                     System.out.println ( "\tНажмите ВВОД, чтобы продолжить" );
-                    break; */
-
+                    break;
 
 
 
@@ -217,9 +204,9 @@ public class Menu implements Serializable {
                     obj.setPaid ( SubscriberPoint.paid );
 
 
-                    SubList.add ( obj );
+                    SubList.add ( 0,obj);
 
-                    for (Subscriber dr : SubList) {//с помощью цикла for each c ArrayList читаем поля поочередно сохраняя в переменную dr
+                   /* for (Subscriber dr : SubList) {//с помощью цикла for each c ArrayList читаем поля поочередно сохраняя в переменную dr
                         dr.showSubscriberInfo ();
                         System.out.println ( "Размер ArrayList SubList:   " + SubList.size () );
                     }
@@ -232,13 +219,14 @@ public class Menu implements Serializable {
                         System.out.println ( "Сериализованная информация о  сохранена в D:\\GIT\\subscriber.ser" );
                     } catch (IOException i) {
                         i.printStackTrace ();
-                    }
+                    }*/
                     if (input.nextLine ().equals ( "q" )) {
                         System.out.println ( "Введите q чтобы попасть назад: " );
                         break;
 
                     }
                     System.out.println ( "\tНажмите ВВОД, чтобы продолжить" );
+
 
                     break;
 
@@ -264,9 +252,9 @@ public class Menu implements Serializable {
                     SubscriberPoint.paid= obj.paid;
 
 
-                    SubList.add ( obj );
+                    SubList.add( 0, obj );
 
-                    for (Subscriber dr : SubList) {//с помощью цикла for each c ArrayList читаем поля поочередно сохраняя с переменную dr
+                   /* for (Subscriber dr : SubList) {//с помощью цикла for each c ArrayList читаем поля поочередно сохраняя с переменную dr
                         dr.showSubscriberInfo ();
                         System.out.println ( "Размер ArrayList DrList:   " + SubList.size () );
                     }
@@ -279,7 +267,7 @@ public class Menu implements Serializable {
                         System.out.println ( "Сериализованная информация о  сохранена в D:\\GIT\\subscriber.ser" );
                     } catch (IOException i) {
                         i.printStackTrace ();
-                    }
+                    } */
                     if (input.nextLine ().equals ( "q" )) {
                         System.out.println ( "Введите q чтобы попасть назад: " );
                         break;
@@ -403,6 +391,8 @@ public class Menu implements Serializable {
         SubscriberPoint.feeRate = feeRate;
         SubscriberPoint.paid = paid;
 
+
+
     }                                                      // Login\Password using *.ser file
 
     public void showServicesList (){
@@ -457,22 +447,21 @@ public class Menu implements Serializable {
     }
 
 
-    public boolean LoginInput() throws IOException {
-        String Username;
-        String Password;
+    public boolean LoginInput(String Username, String Password) throws IOException {
+
         int what;
 
-        Password = SubscriberPoint.SubscriberPassword;
-        Username = SubscriberPoint.SubscriberLogin;
+        //Password = SubscriberPoint.SubscriberPassword;
+        //Username = SubscriberPoint.SubscriberLogin;
 
-                    Scanner input1 = new Scanner ( System.in );
+                  /*  Scanner input1 = new Scanner ( System.in );
                     System.out.println ( "Введите Логин пользователя" );
                     String username = input1.next ();
 
                     Scanner input2 = new Scanner ( System.in );
                     System.out.println ( "Введите пароль " );
-                    String password = input2.next ();
-                    if (username.equals ( Username ) && password.equals ( Password )) {
+                    String password = input2.next (); */
+                    if (Username.equals ( SubscriberPoint.SubscriberLogin ) && Password.equals ( SubscriberPoint.SubscriberPassword )) {
                         System.out.println ( "Доступ предоставлен! Добро пожаловать!\n\n" );
                         return true;
 
@@ -483,6 +472,8 @@ public class Menu implements Serializable {
                     }
 
     }                                   //Login/Password checking
+
+
 
 
     public ArrayList<Subscriber> getSubList() {

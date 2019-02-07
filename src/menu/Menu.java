@@ -202,16 +202,19 @@ public class Menu implements Serializable {
                         dr.showSubscriberInfo ();
                         System.out.println ( "Размер ArrayList SubList:   " + SubList.size () );
                     }
-                    try {
-                        FileOutputStream fileOut1 = new FileOutputStream ( "subscriber.ser" );
-                        ObjectOutputStream out1 = new ObjectOutputStream ( fileOut1 );
-                        out1.writeObject ( obj );
-                        out1.close ();
-                        fileOut1.close ();
-                        System.out.println ( "Сериализованная информация о Subscriber сохранена в D:\\GIT\\subscriber.ser" );
-                    } catch (IOException i) {
-                        i.printStackTrace ();
-                    }
+                        try {
+                            FileOutputStream fileOut1 = new FileOutputStream ( "subscriber.ser", true );
+                            ObjectOutputStream out1 = new ObjectOutputStream ( fileOut1 );
+                            out1.writeObject ( SubList );
+                            out1.flush();
+                            out1.close ();
+                            fileOut1.close ();
+                            System.out.println ( "Сериализованная информация о Subscriber сохранена в D:\\GIT\\subscriber.ser" + SubList.size () );
+                        } catch (IOException i) {
+                            i.printStackTrace ();
+                        }
+
+
                     if (input.nextLine ().equals ( "q" )) {
                         System.out.println ( "Введите q чтобы попасть назад: " );
                         break;
@@ -248,12 +251,13 @@ public class Menu implements Serializable {
                         System.out.println ( "Размер ArrayList SubList:   " + SubList.size () );
                     }
                     try {
-                        FileOutputStream fileOut1 = new FileOutputStream ( "subscriber.ser" );
+                        FileOutputStream fileOut1 = new FileOutputStream ( "subscriber.ser",true );
                         ObjectOutputStream out1 = new ObjectOutputStream ( fileOut1 );
-                        out1.writeObject ( obj );
+                        out1.writeObject ( SubList );
+                        out1.flush();
                         out1.close ();
                         fileOut1.close ();
-                        System.out.println ( "Сериализованная информация о  сохранена в D:\\GIT\\subscriber.ser" );
+                        System.out.println ( "Сериализованная информация о  сохранена в D:\\GIT\\subscriber.ser" + SubList.size ());
                     } catch (IOException i) {
                         i.printStackTrace ();
                     }
@@ -297,7 +301,8 @@ public class Menu implements Serializable {
                     try {
                         FileOutputStream fileOut1 = new FileOutputStream ( "subscriber.ser" );
                         ObjectOutputStream out1 = new ObjectOutputStream ( fileOut1 );
-                        out1.writeObject ( obj );
+                        out1.writeObject ( SubList );
+                        out1.flush ();
                         out1.close ();
                         fileOut1.close ();
                         System.out.println ( "Сериализованная информация о  сохранена в D:\\GIT\\subscriber.ser" );
@@ -327,7 +332,7 @@ public class Menu implements Serializable {
 
     }        //3
 
-    public void helpOnShowSavedFileInfo(int what) throws java.io.IOException {
+    public void helpOnShowSavedFileInfo(int what) throws java.io.IOException, ClassNotFoundException {
 
         readFile ();
     }         //4
@@ -366,7 +371,7 @@ public class Menu implements Serializable {
     }                  //5
 
     ///////////// MainMenu//////////////////////////////////////////////////////
-    public void helpOn(int what) throws java.io.IOException {
+    public void helpOn(int what) throws java.io.IOException, ClassNotFoundException {
         switch (what) {
 
             case '1':
@@ -409,7 +414,7 @@ public class Menu implements Serializable {
 ////////////////////////////////////////////////////////////////////////////////
     ////////////////// Internal Menu Methods ///////////////////////////////////
 
-    public void readFile() {
+    public void readFile() throws IOException, ClassNotFoundException {
 
         String SubscriberId = null;
         String SubscriberName = null;
@@ -451,10 +456,20 @@ public class Menu implements Serializable {
         System.out.format ( format, d.getSubscriberID (), d.getSubscriberName (), d.getSubscriberLastName (), d.getSubscriberAgreementNumber (), d.getSubscriberLogin (), d.getSubscriberPassword (), d.getStartDate (), d.getEndDate (), d.getFeeRate (), d.getPaid () );
         System.out.format ( format2, "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" );
 
+/*
+        FileInputStream fileIn = new FileInputStream ( "subscriber.ser" );
+        ObjectInputStream in = new ObjectInputStream ( fileIn );
+        ArrayList<Subscriber> subList2 = new ArrayList<> (  );
+        subList2 = (ArrayList<Subscriber>) in.readObject ();
+
+        for (int i = 0; i<subList2.size();i++){
+            System.out.println (subList2.get(i).SubscriberName);
+        } */
+
     }                                                           // Read *.ser file
 
     public void LoginPassword() {
-        Subscriber d2 = null;
+       /* Subscriber d2 = null;
         try {
             FileInputStream fileIn = new FileInputStream ( "subscriber.ser" );
             ObjectInputStream in = new ObjectInputStream ( fileIn );
@@ -475,15 +490,15 @@ public class Menu implements Serializable {
         SubscriberPoint.SubscriberLastName = d2.getSubscriberLastName ();
         SubscriberPoint.SubscriberAgreementNumber = d2.getSubscriberAgreementNumber ();
 
-        SubscriberPoint.SubscriberLogin = d2.getSubscriberLogin ();           //считанные логин и пароль передаем в SubscriberPoint, закомментить чтобы сбросить пароль по умолчанию
+    /*    SubscriberPoint.SubscriberLogin = d2.getSubscriberLogin ();           //считанные логин и пароль передаем в SubscriberPoint, закомментить чтобы сбросить пароль по умолчанию
         //   System.out.println (SubscriberPoint.SubscriberLogin);
         SubscriberPoint.SubscriberPassword = d2.getSubscriberPassword ();
         //   System.out.println (SubscriberPoint.SubscriberPassword);
-
         SubscriberPoint.startDate = d2.getStartDate ();
         SubscriberPoint.endDate = d2.getEndDate ();
         SubscriberPoint.feeRate = d2.getFeeRate ();
         SubscriberPoint.paid = d2.getPaid ();
+*/
 
     }                                                      // Login\Password using *.ser file
 

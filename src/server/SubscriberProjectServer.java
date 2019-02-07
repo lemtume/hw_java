@@ -21,47 +21,21 @@ public class SubscriberProjectServer {
                 // запуск потока
                //  thread.start();
 
-                ///////////////// Чтение сериализационного файла и добавление в arrayList, отправка на клиента
-             ///*
-                String SubscriberId = null;
-                String SubscriberName = null;
-                String SubscriberLastName = null;
-                String SubscriberAgreementNumber = null;
-                String SubscriberLogin = null;
-                String SubscriberPassword = null;
-                String startDate = null;
-                String endDate = null;
-                double feeRate = 0;
-                double paid = 0;
 
-                Subscriber obj;
-                obj = new Subscriber (SubscriberId, SubscriberName, SubscriberLastName, SubscriberAgreementNumber, SubscriberLogin, SubscriberPassword, startDate, endDate, feeRate, paid );
-
-                Subscriber d = null;
 
                 try {
-                    FileInputStream fileIn = new FileInputStream ( "subscriber.ser" );
-                    ObjectInputStream in = new ObjectInputStream ( fileIn );
-                    d = (Subscriber) in.readObject ();
-                    in.close ();
-                    fileIn.close ();
-                } catch (IOException i) {
-                    i.printStackTrace ();
-                    return;
-                } catch (ClassNotFoundException cl) {
-                    System.out.println ( "Subscriber класс не найден" );
-                    cl.printStackTrace ();
-                    return;
-                }
-                ////////////
+
+                    FileInputStream fis = new FileInputStream("subscriber.txt");
+                    ObjectInputStream oin = new ObjectInputStream(fis);
+                    ArrayList<Subscriber> arrayList3 = new ArrayList<>();
+
+                    arrayList3  = (ArrayList<Subscriber>) oin.readObject();
 
 
-                ArrayList<Subscriber> arrayList =  new ArrayList<Subscriber>();
-                arrayList.add(d);
 
-                try {
                     ObjectOutputStream objectOutputStream = new ObjectOutputStream(clientSocket.getOutputStream());
-                    objectOutputStream.writeObject(arrayList);
+
+                    objectOutputStream.writeObject(arrayList3);
                 }
                 catch (IOException e) {
                     e.printStackTrace();
@@ -75,15 +49,14 @@ public class SubscriberProjectServer {
 
                 for (Subscriber sb2: arrayList2) {
                     sb2.showSubscriberInfo ();
-                    System.out.println (sb2.SubscriberName + sb2.SubscriberLastName);
 
                 try {
-                    FileOutputStream fileOut = new FileOutputStream("subscriber.ser");
+                    FileOutputStream fileOut = new FileOutputStream("subscriber.txt");
                     ObjectOutputStream out = new ObjectOutputStream ( fileOut );
-                    out.writeObject ( sb2 );
+                    out.writeObject ( arrayList2 );
                     out.close ();
                     fileOut.close ();
-                    System.out.println ("subscriber.cer записан");
+                    System.out.println ("subscriber.txt записан");
 
 
                 } catch (IOException i) {
